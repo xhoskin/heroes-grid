@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg"  style="display:none">
+  <symbol id="hex" viewBox="0 0 4 5">
+    <polygon points="0,1 2,0 4,1 4,4 2,5 0,4" stroke="green"  stroke-width="1" vector-effect="non-scaling-stroke"/>
+  </symbol>
+</svg>
+
+<div class="grid">
+  <div class="row odd first" 
+    *ngFor="let column of rows; let first = isFirst; let even = even"
+    [ngClass]="{'first': isFirst, 'even': even, 'odd': !even}"
+  >
+    <svg class="hex" xmlns="http://www.w3.org/2000/svg" width="40" height="50"
+      *ngFor="let column of cols"
+    ><use xlink:href="#hex" /></svg>
+  </div>
+</div>

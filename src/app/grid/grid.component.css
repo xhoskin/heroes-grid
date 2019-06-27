@@ -1,0 +1,21 @@
+.row {
+    display: flex;
+    margin-top: -10px;
+  }
+    
+  .hex {
+    margin-left: -1px;
+    fill:transparent;
+  }
+  
+  .row.odd {
+    margin-left: 20px;
+  }
+  
+  .row.first {
+    margin-top: 0;
+  }
+  
+  .hex:hover {
+    fill: rgba(0,0,0,.5);
+  }
